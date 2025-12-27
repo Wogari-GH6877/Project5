@@ -1,0 +1,50 @@
+:root {
+  --bg: #ffffff;
+  --text: #333333;
+  --accent: #646cff;
+}
+
+.dark-mode {
+  --bg: #242424;
+  --text: #f9f9f9;
+  --accent: #9097ff;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  min-height: 44px; }
+
+@media (max-width: 480px) {
+  .task-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
